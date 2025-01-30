@@ -5,6 +5,7 @@ This repo is based on [tldraw](https://github.com/tldraw/tldraw) template with t
 This App Lets you draw anywhere on your screen / on your app.
 Similar to EpicPen or gInk. Works with electron and thus on all platforms.
 
+![Screenshot](public/Screenshot.png)
 
 ## Local development
 
