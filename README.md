@@ -1,6 +1,10 @@
-
-
 This repo is based on [tldraw](https://github.com/tldraw/tldraw) template with the [Vite](https://vitejs.dev/) development environment.
+
+## What it does
+
+This App Lets you draw anywhere on your screen / on your app.
+Similar to EpicPen or gInk. Works with electron and thus on all platforms.
+
 
 ## Local development
 
@@ -16,7 +20,7 @@ This project is provided under the MIT license found [here](https://github.com/t
 
 ## Trademarks
 
-Copyright (c) 2024-present tldraw Inc. The tldraw name and logo are trademarks of tldraw. Please see our [trademark guidelines](https://github.com/tldraw/tldraw/blob/main/TRADEMARKS.md) for info on acceptable usage.
+Copyright (c) 2024-present tldraw Inc. The tldraw name and logo are trademarks of tldraw. Please see  [trademark guidelines](https://github.com/tldraw/tldraw/blob/main/TRADEMARKS.md) for info on acceptable usage.
 
 ## Distributions
 
