@@ -1,9 +1,13 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, screen } from 'electron';
 
 let mainWindow: BrowserWindow | null;
 
 function createWindow() {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+
   mainWindow = new BrowserWindow({
+    width,
+    height,
     transparent: true,
     frame:false
   })
