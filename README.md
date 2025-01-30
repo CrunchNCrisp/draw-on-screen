@@ -13,8 +13,6 @@ Install dependencies with `yarn` or `npm install`.
 
 Run the development server with `yarn dev` or `npm run dev`.
 
-Open `http://localhost:5173/` in your browser to see the app.
-
 ## License
 
 This project is provided under the MIT license found [here](https://github.com/tldraw/vite-template/blob/main/LICENSE.md). The tldraw SDK is provided under the [tldraw license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md).
