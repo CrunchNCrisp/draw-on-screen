@@ -1,5 +1,5 @@
 import { Tldraw } from 'tldraw'
-import { CustomMainMenu, CustomQuickActions } from '../../main/customGui.tsx'
+import { CustomMainMenu, CustomQuickActions } from '../../components/CustomGui.tsx'
 
 function App() {
 	return (
