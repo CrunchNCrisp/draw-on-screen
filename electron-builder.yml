@@ -1,0 +1,23 @@
+appId: com.github.CrunchNCrisp.DrawOnScreen
+productName: DrawOnScreen
+directories:
+  output: dist
+files:
+  - out/main/**/*  # Ensure main process files are included
+  - out/preload/**/*  # Include preload files
+  - out/renderer/**/*  # Include frontend files
+  - package.json
+
+win:
+  target:
+    - nsis
+mac:
+  target:
+    - dmg
+linux:
+  target:
+    - AppImage
+publish:
+  provider: github
+  owner: CrunchNCrisp
+  repo: draw-on-screen
