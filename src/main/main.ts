@@ -1,8 +1,10 @@
 import { app, BrowserWindow, screen } from 'electron';
+import * as path from "node:path";
 
 let mainWindow: BrowserWindow | null;
+const IS_DEV = process.env.NODE_ENV === 'development';
 
-function createWindow() {
+async function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
   mainWindow = new BrowserWindow({
@@ -12,15 +14,21 @@ function createWindow() {
     frame:false
   })
 
-  //mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Vite dev server URL
-  mainWindow.loadURL('http://localhost:5173');
+  if (IS_DEV) {
+    const port = '5173';
+    await mainWindow.loadURL('http://localhost:' + port + '/');
+  }
+  else {
+    await mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
+  }
   mainWindow.on('closed', () => mainWindow = null);
 }
 
-app.whenReady().then(() => {
-  createWindow();
+app.whenReady().then(async () => {
+  await createWindow();
 });
 
 app.on('window-all-closed', () => {
@@ -29,8 +37,8 @@ app.on('window-all-closed', () => {
   }
 });
 
-app.on('activate', () => {
+app.on('activate', async () => {
   if (mainWindow == null) {
-    createWindow();
+    await createWindow();
   }
 });

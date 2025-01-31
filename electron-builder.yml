@@ -7,7 +7,6 @@ files:
   - out/preload/**/*  # Include preload files
   - out/renderer/**/*  # Include frontend files
   - package.json
-
 win:
   target:
     - nsis
