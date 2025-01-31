@@ -1,5 +1,6 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from "node:path";
+import * as electron from 'electron';
 
 let mainWindow: BrowserWindow | null;
 const IS_DEV = process.env.NODE_ENV === 'development';
@@ -14,7 +15,11 @@ async function createWindow() {
     frame:false
   })
 
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
+  mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+    electron.shell.openExternal(url);
+    return { action: 'deny' };
+  });
 
   // Vite dev server URL
   if (IS_DEV) {
