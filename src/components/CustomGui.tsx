@@ -13,18 +13,14 @@ export function CustomQuickActions() {
     }
 
     const toggleBackground = () => {
-        const styleSheet = document.styleSheets[0]
-        const ruleIndex = Array.from(styleSheet.cssRules).findIndex(
-            (rule) => rule.cssText.startsWith('.tl-background'),
-        )
+        const newIsTransparent = !isTransparent
+        setIsTransparent(newIsTransparent)
 
-        if (ruleIndex !== -1) {
-            const rule = styleSheet.cssRules[ruleIndex] as CSSStyleRule
-            rule.style.background = isTransparent ? 'var(--color-background)' : 'transparent'
+        if (newIsTransparent) {
+            document.body.classList.remove('show-whiteboard')
+        } else {
+            document.body.classList.add('show-whiteboard')
         }
-
-        // Toggle the state
-        setIsTransparent(!isTransparent)
     }
 
     return (

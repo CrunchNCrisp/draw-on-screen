@@ -9,3 +9,7 @@ body {
 .tl-background{
 	background: transparent;
 }
+
+body.show-whiteboard .tl-background {
+	background: var(--color-background, white);
+}
