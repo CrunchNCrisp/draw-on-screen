@@ -15,7 +15,9 @@ async function createWindow() {
     frame:false
   })
 
-  mainWindow.webContents.openDevTools()
+    if (IS_DEV) {
+        mainWindow.webContents.openDevTools()
+    }
 
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     electron.shell.openExternal(url);
