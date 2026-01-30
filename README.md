@@ -13,6 +13,16 @@ Install dependencies with `yarn` or `npm install`.
 
 Run the development server with `yarn dev` or `npm run dev`.
 
+## Packaging
+
+To package the application for your current platform, you can use the following commands:
+
+- **Windows**: `yarn package:win`
+- **macOS**: `yarn package:mac`
+- **Linux**: `yarn package:linux`
+
+These commands will build the project and create the distributables in the `dist` folder using `electron-builder`.
+
 ## License
 
 This project is provided under the MIT license found [here](https://github.com/tldraw/vite-template/blob/main/LICENSE.md). The tldraw SDK is provided under the [tldraw license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md).
