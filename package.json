@@ -16,29 +16,29 @@
 		"package:linux": "cross-env NODE_ENV=prod yarn build && electron-builder --linux --config"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.7.2",
-		"@fortawesome/free-solid-svg-icons": "^6.7.2",
-		"@fortawesome/react-fontawesome": "^0.2.2",
-		"electron-vite": "^2.3.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"tldraw": "3.7.0"
+		"@fortawesome/fontawesome-svg-core": "^7.1.0",
+		"@fortawesome/free-solid-svg-icons": "^7.1.0",
+		"@fortawesome/react-fontawesome": "^3.1.1",
+		"electron-vite": "^5.0.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"tldraw": "^4.3.0"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.0",
-		"@types/react-dom": "^18.2.0",
+		"@types/react": "^19.2.10",
+		"@types/react-dom": "^19.2.3",
 		"@typescript-eslint/eslint-plugin": "^8.11.0",
 		"@typescript-eslint/parser": "^8.11.0",
-		"@vitejs/plugin-react-swc": "^3.7.0",
-		"cross-env": "^7.0.3",
-		"electron": "^34.0.2",
-		"electron-builder": "^25.1.8",
+		"@vitejs/plugin-react-swc": "^4.2.2",
+		"cross-env": "^10.1.0",
+		"electron": "^40.1.0",
+		"electron-builder": "^26.4.0",
 		"eslint": "^9.13.0",
-		"eslint-plugin-react-hooks": "^5.0.0",
+		"eslint-plugin-react-hooks": "^7.0.1",
 		"eslint-plugin-react-refresh": "^0.4.13",
 		"prettier": "^3.4.2",
 		"typescript": "^5.0.2",
-		"vite": "^5.4.10"
+		"vite": "^7.3.1"
 	},
 	"main": "./out/main/main.js"
 }
